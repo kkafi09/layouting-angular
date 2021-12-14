@@ -8,6 +8,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { PasswordresetComponent } from './auth/passwordreset/passwordreset.component';
 import { LoginwidthComponent } from './auth/loginwidth/loginwidth.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginwidthComponent } from './auth/loginwidth/loginwidth.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     {provide:LocationStrategy, useClass:HashLocationStrategy},

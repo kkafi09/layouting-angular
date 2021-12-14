@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
-import { LoginwComponent } from './loginw/loginw.component';
+import { LoginwidthComponent } from './loginwidth/loginwidth.component';
+import { PasswordresetComponent } from './passwordreset/passwordreset.component';
 import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
   {path:'login-default', component:LoginComponent},
-  {path:'login-width', component:LoginwComponent},
+  {path:'login-width', component:LoginwidthComponent},
   {path:'register', component:RegisterComponent},
-  {path:'forgotpassword', component:ForgotpasswordComponent},
+  {path:'forgotpassword', component:PasswordresetComponent},
 ];
 
 @NgModule({

@@ -1,26 +1,34 @@
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <!-- <div class="row">
-        <div class="alert alert-danger" role="alert">
-            A simple primary alert—check it out!
-        </div>
-    </div> -->
-    <div class="row align-items-center g-lg-5 py-5">
-        <!-- <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 mb-3">Login</h1>
-            <p class="col-lg-10 fs-4">by <a target="_blank" href="#">Muhammad Kafanal Kafi</a></p>
-        </div> -->
+    <div class="row align-items-center g-lg-1 py-5">
         <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" action="/users/login">
+            <form class="p-5 p-md-5 border rounded-3 shadow" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <span class="fs-1 d-flex justify-content-center py-3">Login</span>
                 <div class="form-floating mb-3">
-                    <input name="id" type="text" class="form-control" id="id" placeholder="id">
-                    <label for="id">Id</label>
+                    <input name="id" type="email" class="form-control" formControlName="email" id="id" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <label for="id">Email</label>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
                 </div>
                 <div class="form-floating mb-3">
-                    <input name="password" type="password" class="form-control" id="password" placeholder="password">
-                    <label for="password">Password</label>
+                    <input name="password" type="password" class="form-control" formControlName="password" id="password" placeholder="password" minlength="6" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <label for="password">password</label>
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">password is required</div>
+                        <div *ngIf="f.password.errors.minlength">password must be at least 6 characters</div>
+                    </div>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign On</button>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    
+                </div>
+                <button class="w-100 btn btn-lg btn-primary shadow-sm" type="submit" (ngSubmit)="onSubmit()">Login</button>
+                <a routerLink="/passwordreset" class="d-flex justify-content-center py-3 text-decoration-none">Forgot Password</a>
             </form>
+
+            <span class="d-flex justify-content-center py-3">Don't have an account?<a routerLink="/register" class="text-decoration-none">Sign up</a></span>
         </div>
     </div>
 </div>

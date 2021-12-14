@@ -9,7 +9,7 @@ import { LoginwidthComponent } from './loginwidth/loginwidth.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, PasswordresetComponent, LoginwidthComponent],
+  declarations: [RegisterComponent, PasswordresetComponent, LoginwidthComponent],
   imports: [
     CommonModule,
     AuthRoutingModule
