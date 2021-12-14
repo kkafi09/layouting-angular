@@ -6,17 +6,17 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { PasswordresetComponent } from './auth/passwordreset/passwordreset.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginwidthComponent } from './auth/loginwidth/loginwidth.component';
+import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    PasswordresetComponent,
-    LoginwidthComponent
+    LoginwidthComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,
