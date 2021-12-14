@@ -1,29 +1,66 @@
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <!-- <div class="row">
-        <div class="alert alert-danger" role="alert">
-            A simple primary alert—check it out!
-        </div>
-    </div> -->
-    <div class="row align-items-center g-lg-5 py-5">
-        <!-- <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 mb-3">Register</h1>
-            <p class="col-lg-10 fs-4">by <a target="_blank" href="#">Muhammad Kafanal Kafi</a></p>
-        </div> -->
-        <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" action="">
-                <div class="form-floating mb-3">
-                    <input name="id" type="text" class="form-control" id="id" placeholder="id">
-                    <label for="id">Id</label>
+    <div class="row align-items-center g-lg-1 py-5">
+        <div class="col-md-10 mx-auto col-lg-5" style="width: 50rem;">
+            <form class="p-4 p-md-5 border rounded-3 shadow" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <span class="fs-3 d-flex justify-content-center py-3">Register</span>
+                <div class="row row-cols-2">
+                    <div class="form-floating mb-3">
+                        <input name="firstName" type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                        <label for="firstName" class="px-4">Nama Depan</label>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">FirstName is required</div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="lastName" type="text" class="form-control" formControlName="lastName" id="firstName" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+                        <label for="firstName" class="px-4">Nama Belakang</label>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">LastName is required</div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="birthplace" type="text" class="form-control" formControlName="birthplace" id="birthplace" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.birthplace.errors }">
+                        <label for="birthplace" class="px-4">Tempat Lahir</label>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Birthplace is required</div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="date" type="date" class="form-control" formControlName="date" id="date" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
+                        <label for="date" class="px-4">Tanggal Lahir</label>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Date is required</div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="email" type="email" class="form-control" formControlName="email" id="email" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                        <label for="email" class="px-4">Email</label>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="address" type="text" class="form-control" formControlName="address" id="address" placeholder="Address" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                        <label for="address" class="px-4">Alamat</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="password" type="password" class="form-control" formControlName="password" id="password" placeholder="password" minlength="6" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                        <label for="password" class="px-4">Password</label>
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">password is required</div>
+                            <div *ngIf="f.password.errors.minlength">password must be at least 6 characters</div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="confirmPassword" type="password" class="form-control" formControlName="confirmPassword" id="id" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
+                        <label for="confirmPassword" class="px-4">Confirm Password</label><div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.confirmPassword.errors.mustMatch">Password must be match</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <input name="name" type="text" class="form-control" id="name" placeholder="name">
-                    <label for="name">Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input name="password" type="password" class="form-control" id="password" placeholder="password">
-                    <label for="password">Password</label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                <button class="w-100 btn btn-lg btn-primary shadow-sm" type="submit" (ngSubmit)="onSubmit()">Register</button>
             </form>
         </div>
     </div>

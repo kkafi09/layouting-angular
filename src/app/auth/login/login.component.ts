@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from '../_helpers/must-match';
 
 
 @Component({
@@ -10,31 +9,31 @@ import { MustMatch } from '../_helpers/must-match';
 })
 export class LoginComponent implements OnInit {
 
-  registerForm: FormGroup;
+  loginForm: FormGroup;
   submitted = false;
 
   constructor(private formBuilder : FormBuilder) {}
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]],
-    }, {});
-}
+      this.loginForm = this.formBuilder.group({
+          email: ['', [Validators.required, Validators.email]],
+          password: ['', [Validators.required, Validators.minLength(6)]],
+      }, {});
+  }
 
 // convenience getter for easy access to form fields
-get f() { return this.registerForm.controls; }
+  get f() { return this.loginForm.controls; }
 
-onSubmit() {
-    this.submitted = true;
+  onSubmit() {
+      this.submitted = true;
 
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-        return;
-    }
+      // stop here if form is invalid
+      if (this.loginForm.invalid) {
+          return;
+      }
 
-    // display form values on success
-    alert("sukses login")
-}
+      // display form values on success
+      alert("sukses login")
+  }
 
 }
