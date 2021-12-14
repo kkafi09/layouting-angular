@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MustMatch } from '../_helpers/must-match';
 
 @Component({
   selector: 'app-forgotpassword',
@@ -17,7 +18,10 @@ export class ForgotpasswordComponent implements OnInit {
       this.forgotPassForm = this.formBuilder.group({
           email: ['', [Validators.required, Validators.email]],
           password: ['', [Validators.required, Validators.minLength(6)]],
-      }, {});
+          confirmPassword: ['', Validators.required],
+      }, {
+        validator: MustMatch('password', 'confirmPassword')
+      });
   }
 
 // convenience getter for easy access to form fields
