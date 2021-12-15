@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
       }
 
       // display form values on success
-      alert("sukses login")
-  }
-
+      alert("Sukses Login")
+    }
 }

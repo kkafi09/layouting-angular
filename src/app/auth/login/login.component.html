@@ -24,10 +24,12 @@
                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     
                 </div>
-                <button class="w-100 btn btn-lg btn-primary shadow-sm" type="submit" (ngSubmit)="onSubmit()">Login</button>
-                <a routerLink="/forgotPass" class="d-flex justify-content-center py-3 text-decoration-none">Forgot Password</a>
+                <button class="w-100 btn btn-lg btn-primary shadow-sm" type="submit" (click)="onSubmit()">Login</button> 
+                <div class="mt-4 text-center">
+                    <a routerLink="/forgotPass" class="text-primary text-decoration-none"><i class="fas fa-lock"></i> Forgot
+                      your password?</a>
+                </div>
             </form>
-
             <span class="d-flex justify-content-center py-3">Don't have an account?<a routerLink="/register" class="text-decoration-none">Sign up</a></span>
         </div>
     </div>
