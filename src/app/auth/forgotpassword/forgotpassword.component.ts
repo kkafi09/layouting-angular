@@ -36,7 +36,8 @@ export class ForgotpasswordComponent implements OnInit {
       }
 
       // display form values on success
-      alert("sukses login")
+      alert("sukses mereset password")
+      window.location.href ='/';
   }
 
 }

@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
       }
 
       // display form values on success
-      alert("berhasil sign up");
+      alert("berhasil register");
       window.location.href='/'
   }
 }
