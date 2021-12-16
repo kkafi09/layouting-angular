@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
       }
 
       // display form values on success
-      alert("Sukses Login")
+      alert("Sukses Login");
+      window.location.href ='/#/dashboard';
     }
 }

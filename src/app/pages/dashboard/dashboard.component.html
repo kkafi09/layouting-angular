@@ -1,0 +1,42 @@
+
+<div class="d-flex justify-content-center py-4">
+    <div class="col-xl-8">
+        <div class="row">
+            <div *ngFor="let stat of statData" class="col-md-3">
+                <div class="card mini-stats-wid shadow-sm rounded p-2">
+                    <div class="card-body">
+                    <div class="media">
+                        <div class="media-body">
+                            <p class="text-muted font-weight-medium">{{stat.title}}</p>
+                            <p class="mb-0" style="font-size: 18px; font-weight: medium;">{{stat.value}}</p>
+                            <p class="mb-0" style="font-size: 18px; font-weight: medium;">{{stat.value1}}</p>
+                        </div>
+                   </div>
+                </div>
+                <!-- end card-body -->
+            </div>
+            <!-- end card -->
+        </div>
+
+        <div class="card my-4">
+            <div class="card-body">
+                <h4 class="card-title mb-4 float-sm-left">Grafik Data</h4>
+                <div style="width: 200px; height: 200px;"></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="float-sm-right py-4">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript: void(0);">Week</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript: void(0);">Month</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="javascript: void(0);">Year</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
