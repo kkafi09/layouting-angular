@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from 'src/app/layouts/navbar/navbar.component';
 
 @Component({
   selector: 'app-product',
@@ -13,4 +12,13 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  displayStyle = "none";
+
+  onClickModal(){
+    this.displayStyle = "block";
+  }
+
+  onCloseModal(){
+    this.displayStyle = "none";
+  }
 }

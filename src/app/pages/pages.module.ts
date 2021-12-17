@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductComponent } from './product/product.component';
-import { NavbarComponent } from '../layouts/navbar/navbar.component';
+
 
 
 
@@ -13,7 +13,6 @@ import { NavbarComponent } from '../layouts/navbar/navbar.component';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    NavbarComponent
   ]
 })
 export class PagesModule { }

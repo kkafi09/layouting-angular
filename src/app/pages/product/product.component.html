@@ -1,1 +1,142 @@
-<p>Produk works</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/#/dashboard">Cashier.id</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/#/dashboard">Dashboard</a>
+              </li>
+              <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Laporan</a>
+              </li> -->
+              <li class="nav-item" style="cursor: pointer;">
+                  <a href="/#/product" class="nav-link" >Produk</a>
+              </li>
+              <!-- <li class="nav-item">  
+                  <a class="nav-link" href="#">Invetntory</a>
+              </li> -->
+              <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Pelanggan</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Outlet</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Karyawan</a>
+              </li> -->   
+          </ul>
+          <a href="/#/dashboard" class="d-flex align-items-center mx-2">
+              <img src="../../../assets/img/user-solid.svg" style="width: 20px;" class="text-light" alt="" >
+          </a>  
+          <a href="/#/login" class="d-flex align-items-center mx-3">
+              <img src="../../../assets/img/sign-out-alt-solid.svg" style="width: 20px; " class="text-light" alt="" >
+          </a>        
+      
+      </div>
+  </div>
+</nav>
+
+<div class="d-flex justify-content-center">
+    <div class="containter-fluid p-5" style="width: 70rem;">
+        <h2 class="">Produk</h2>
+        <!-- add data -->
+        <div>
+            <button type="button" class="btn btn-primary mb-2 float-end" (click)="onClickModal()">
+                Tambah
+            </button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <!-- end modal  -->
+        <table class="table table-responsive table-bordered">
+            <thead class="table-primary ">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Produk</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Nasi Ayam Geprek</td>
+                <td>Makanan </td>
+                <td>20.000</td>
+                <td>
+                    <a href="" class="btn btn-warning">Edit</a> | <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Nasi Ayam Geprek</td>
+                <td>Makanan </td>
+                <td>20.000</td>
+                <td>
+                    <a href="" class="btn btn-warning">Edit</a> | <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Nasi Ayam Geprek</td>
+                <td>Makanan </td>
+                <td>20.000</td>
+                <td>
+                    <a href="" class="btn btn-warning">Edit</a> | <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Nasi Ayam Geprek</td>
+                <td>Makanan </td>
+                <td>20.000</td>
+                <td>
+                    <a href="" class="btn btn-warning">Edit</a> | <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+</div>

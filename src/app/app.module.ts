@@ -9,7 +9,6 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginwidthComponent } from './auth/loginwidth/loginwidth.component';
 import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
-import { NavbarComponent } from './layouts/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
     RegisterComponent,
     LoginwidthComponent,
     ForgotpasswordComponent,
-    NavbarComponent
   ],
   imports: [
     BrowserModule,
