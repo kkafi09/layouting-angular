@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
                 label: '# of Votes',
-                data: [14,10,9,8,9,12],
+                data: [12,10,9,8,9,11],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -57,7 +57,7 @@ export class DashboardComponent implements OnInit {
           labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
           datasets: [{
               label: '# of Votes',
-              data: [14,10,9,8,9,12],
+              data: [12,10,9,8,9,11],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -92,7 +92,7 @@ export class DashboardComponent implements OnInit {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
-            data: [14,10,9,8,9,12],
+            data: [12,10,9,8,9,11],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

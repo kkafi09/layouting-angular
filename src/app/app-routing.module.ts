@@ -7,6 +7,8 @@ import { LoginwidthComponent } from './auth/loginwidth/loginwidth.component';
 import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProductComponent } from './pages/product/product.component';
+import { KasirComponent } from './pages/kasir/kasir.component';
+import { TransaksiComponent } from './pages/transaksi/transaksi.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'},
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'forgot', component:ForgotpasswordComponent},
   {path:'dashboard', component:DashboardComponent},
-  {path:'product', component:ProductComponent}
+  {path:'product', component:ProductComponent},
+  {path:'kasir', component:KasirComponent},
+  {path:'transaksi', component:TransaksiComponent}
 ];
 
 @NgModule({
