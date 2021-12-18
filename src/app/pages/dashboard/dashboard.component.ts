@@ -14,16 +14,16 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const ctx = document.getElementById('pieChart');
-    const ctx1 = document.getElementById('barsChart');
-    const ctx2 = document.getElementById('lineChart');
+    const ctx = document.getElementById('pieChart') as HTMLCanvasElement;
+    const ctx1 = document.getElementById('barsChart') as HTMLCanvasElement;
+    const ctx2 = document.getElementById('lineChart') as HTMLCanvasElement;
     const myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [14,10,9,8,9,12],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -45,9 +45,9 @@ export class DashboardComponent implements OnInit {
         },
         options: {
             scales: {
-                y: {
-                    beginAtZero: true
-                }
+                // y: {
+                //     beginAtZero: true
+                // }
             }
         }
     })
@@ -57,7 +57,7 @@ export class DashboardComponent implements OnInit {
           labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
           datasets: [{
               label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
+              data: [14,10,9,8,9,12],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -79,9 +79,9 @@ export class DashboardComponent implements OnInit {
       },
       options: {
           scales: {
-              y: {
-                  beginAtZero: true
-              }
+            //   y: {
+            //       beginAtZero: true
+            //   }
           }
       }
   });
@@ -92,7 +92,7 @@ export class DashboardComponent implements OnInit {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [14,10,9,8,9,12],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -114,9 +114,9 @@ export class DashboardComponent implements OnInit {
     },
     options: {
         scales: {
-            y: {
-                beginAtZero: true
-            }
+            // y: {
+            //     beginAtZero: true
+            // }
         }
     }
 });

@@ -9,7 +9,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProductComponent } from './pages/product/product.component';
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},
+  {path:'', redirectTo:'login', pathMatch:'full'},
   {path:'login', component:LoginComponent},
   {path:'login-width', component:LoginwidthComponent},
   {path:'register', component:RegisterComponent},

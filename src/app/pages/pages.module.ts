@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductComponent } from './product/product.component';
 import { ChartsModule } from 'ng2-charts';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,6 +15,7 @@ import { ChartsModule } from 'ng2-charts';
     CommonModule,
     ChartsModule,
     PagesRoutingModule,
+    RouterModule
   ]
 })
 export class PagesModule { }

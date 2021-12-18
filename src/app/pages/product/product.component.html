@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/#/dashboard">Dashboard</a>
+                  <a href="/#/dashboard" class="nav-link active">Dashboard</a>
               </li>
               <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Laporan</a>
@@ -16,7 +16,7 @@
                   <a href="/#/product" class="nav-link" >Produk</a>
               </li>
               <!-- <li class="nav-item">  
-                  <a class="nav-link" href="#">Invetntory</a>
+                  <a class="nav-link" href="#">Invetntory</a> 
               </li> -->
               <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Pelanggan</a>
@@ -39,61 +39,108 @@
   </div>
 </nav>
 
-<div class="d-flex justify-content-center">
-    <div class="containter-fluid p-5" style="width: 70rem;">
-        <h2 class="">Produk</h2>
-        <!-- add data -->
-        <button class="btn btn-primary float-end my-2">Tambah</button>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-2 py-4">
+        <ul class="list-group">
+          <!-- produk -->
+          <li class="list-group-item list-group-item-primary">Produk</li>
+          <li class="list-group-item">Kelola Produk</li>
+          <li class="list-group-item">Diskon</li>
+          <li class="list-group-item">Kategory Produk</li>
+          <!-- Toko -->
+          <li class="list-group-item list-group-item-primary">Kelola Toko</li>
+          <li class="list-group-item">Pembayaran </li>
+          <li class="list-group-item" >Outlet</li>
+          <li class="list-group-item">Inventory</li>
+          <!-- Transaksi -->
+          <li class="list-group-item list-group-item-primary">Transaksi</li>
+          <li class="list-group-item">Penjualan</li>
+          <li class="list-group-item">Pembelian</li>
+          <!-- Pengaturan -->
+          <li class="list-group-item list-group-item-primary">Pengaturan</li>
+          <li class="list-group-item">Karyawan</li>
+        </ul>
+      </div>
 
-        <table class="table table-responsive table-bordered">
-            <thead class="table-light ">
-              <tr>
-                <th scope="col">No</th>
-                <th scope="col">Produk</th>
-                <th scope="col">Kategori</th>
-                <th scope="col">Harga</th>
-                <th scope="col">Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Nasi Ayam Geprek</td>
-                <td>Makanan </td>
-                <td>20.000</td>
-                <td>
-                    <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Nasi Ayam Geprek</td>
-                <td>Makanan </td>
-                <td>20.000</td>
-                <td>
-                    <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Nasi Ayam Geprek</td>
-                <td>Makanan </td>
-                <td>20.000</td>
-                <td>
-                    <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Nasi Ayam Geprek</td>
-                <td>Makanan </td>
-                <td>20.000</td>
-                <td>
-                    <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-    </div>
+      <div class="col-xl-10 py-4">
+        <!-- <div class="d-flex justify-content-center"> -->
+            <!-- <div class="containter-fluid p-5" style="width: 70rem;"> -->
+                <h2 class="">Produk</h2>
+                <div class="bd-highlight d-flex align-items-center my-2">
+                    <!-- <label for="exampleFormControlSelect1" class="me-2">Kategori : </label> -->
+                    <select class="form-select text-center " id="kategori" style="width: 125px; height: 40px;">
+                        <option>Kategori</option>
+                        <option>Makanan</option>
+                        <option>Minuman</option>
+                        <option>Snack</option>
+                    </select>
+                    <!-- add data -->
+                    <button type="button" class="btn btn-primary ms-auto" (click)="openPopup()">Tambah</button>
+                    <!-- <div class="modal"tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">Tambah</h4>
+                            </div>
+                         </div>
+                      </div>
+                    </div>         -->
+                </div>
+        
+                <table class="table table-responsive table-bordered">
+                    <thead class="table" style="background-color: #cfe2ff;">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Produk</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Nasi Ayam Geprek</td>
+                        <td>Makanan </td>
+                        <td>20.000</td>
+                        <td>
+                            <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Nasi Goreng</td>
+                        <td>Makanan </td>
+                        <td>20.000</td>
+                        <td>
+                            <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Kopi</td>
+                        <td>Minuman </td>
+                        <td>20.000</td>
+                        <td>
+                            <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Nasi Ayam Geprek</td>
+                        <td>Makanan </td>
+                        <td>20.000</td>
+                        <td>
+                            <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                </table>
+            </div>
+        <!-- </div> -->
+      <!-- </div>  -->
+    </div>  
 </div>
+
