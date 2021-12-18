@@ -11,14 +11,13 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   displayStyle = "none";
-
-  onClickModal(){
+  
+  openPopup() {
     this.displayStyle = "block";
   }
-
-  onCloseModal(){
+  closePopup() {
     this.displayStyle = "none";
   }
 }

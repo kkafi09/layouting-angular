@@ -40,55 +40,125 @@
 </nav>
 
 <div class="container-fluid">
-    <div class="d-flex justify-content-center py-4">
-        <div class="col-xl-8">
-            <div class="row">
+    <div class="row">
+      <div class="col-xl-2 py-4">
+        <ul class="list-group">
+          <!-- produk -->
+          <li class="list-group-item list-group-item-primary">Produk</li>
+          <li class="list-group-item">Kelola Produk</li>
+          <li class="list-group-item">Diskon</li>
+          <li class="list-group-item">Kategory Produk</li>
+          <!-- Toko -->
+          <li class="list-group-item list-group-item-primary">Kelola Toko</li>
+          <li class="list-group-item">Pembayaran </li>
+          <li class="list-group-item" >Outlet</li>
+          <li class="list-group-item">Inventory</li>
+          <!-- Transaksi -->
+          <li class="list-group-item list-group-item-primary">Transaksi</li>
+          <li class="list-group-item">Penjualan</li>
+          <li class="list-group-item">Pembelian</li>
+          <!-- Pengaturan -->
+          <li class="list-group-item list-group-item-primary">Pengaturan</li>
+          <li class="list-group-item">Karyawan</li>
+        </ul>
+      </div>
+      <div class="col-xl-10 pt-4">
+        <div class="row">
                 <div class="col-sm-3 rounded">
-                  <div class="card shadow">
-                    <div class="card-body">
-                      <h5 class="card-title ">This Month</h5>
-                      <p class="card-text ">1,235</p>
-                      <p class="card-text text-primary">.</p>
+                  <div class="card shadow-sm" >
+                    <div class="card-body d-flex">
+                      <div class="">
+                        <span class="card-title fw-bold ">Total Penjualan Bulan ini</span>
+                        <p class="card-text">2,34</p>
+                        <p class="card-text text-light">Hello</p>
+                      </div>
+                      <div class="mx-auto d-flex justify-content-center align-items-center">
+                        <img src="../../../assets/img/dollar-sign-solid.svg" alt="" style="width: 20px;">
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-3 rounded">
-                  <div class="card shadow">
-                    <div class="card-body">
-                      <h5 class="card-title ">Today</h5>
-                      <p class="card-text ">2,34</p>
-                      <p class="card-text text-danger">.</p>
+                  <div class="card shadow-sm">
+                    <div class="card-body d-flex">
+                      <div class="">
+                        <span class="card-title fw-bold ">Total Penjualan Hari ini</span>
+                        <p class="card-text">2,34</p>
+                        <p class="card-text text-light">Hello</p>
+                      </div>
+                      <div class="mx-auto d-flex justify-content-center align-items-center">
+                        <img src="../../../assets/img/dollar-sign-solid.svg" alt="" style="width: 20px;">
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-3 rounded">
-                    <div class="card shadow">
-                      <div class="card-body">
-                        <h5 class="card-title ">Items Sold</h5>
-                        <p class="card-text ">Makanan (25).</p>
-                        <p class="card-text ">Minuman (35).</p>
+                    <div class="card shadow-sm">
+                      <div class="card-body d-flex">
+                        <div class="">
+                          <span class="card-title fw-bold ">Penjualan Produk</span>
+                          <p class="card-text">Makanan (25)</p>
+                          <p class="card-text">Minuman (30)</p>
+                        </div>
+                        <div class="mx-auto d-flex justify-content-center align-items-center">
+                          <img src="../../../assets/img/boxes-solid.svg" alt="" style="width: 40px;">
+                        </div>
                       </div>
                     </div>
                 </div>
                 <div class="col-sm-3 rounded">
-                    <div class="card shadow rounded">
-                      <div class="card-body">
-                        <h5 class="card-title ">Most Seller</h5>
-                        <p class="card-text ">Ayam Geprek (20)</p>
-                        <p class="card-text ">Kopi (20)</p>
+                    <div class="card shadow-sm">
+                      <div class="card-body d-flex">
+                        <div class="">
+                          <span class="card-title fw-bold ">Best Seller</span>
+                          <p class="card-text">Nasi Goreng (25)</p>
+                          <p class="card-text">Kopi (30)</p>
+                        </div>
+                        <div class="mx-auto d-flex justify-content-center align-items-center">
+                          <img src="../../../assets/img/medal-solid.svg" alt="" style="width: 40px;">
+                        </div>
                       </div>
                     </div>
                 </div>
             </div>
-              
-    
-            <div class="card my-4">
-                <div class="card-body shadow">
-                    <h4 class="card-title mb-4 float-sm-left">Grafik Data</h4>
-                    <div style="width: 300px; height: 300px; "></div>
-                    <div class="clearfix"></div>
+            
+        
+            <div class="col mt-3">
+              <div class="row">
+                <div class="mb-4">
+                  <div class="card shadow-sm">
+                    <div class="card-title text-center mt-3">Total Penjualan Per Hari
+                      <div class="card-body">
+                          <!-- Bar Chart -->
+                          <canvas id="barsChart" width="300" height="150" style="display: block;"></canvas>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+            </div>  
+            
+            <div class="d-flex">
+              <div class="col-sm-6 card shadow-sm">
+                <div class="card-title text-center mt-3">Penjualan Produk
+                  <div class="card-body">
+                    <div class="chartjs-chart">
+                      <!-- Bar Chart -->
+                      <canvas id="pieChart" width="300" height="300" style="display: block;"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+                  
+              <div class="col-sm-6 card shadow-sm  ms-auto">
+                <div class="card-title text-center mt-3">Total Penjualan Bulan ini</div>
+                <div class="card-body">
+                  <canvas id="lineChart" width="300" height="300" style="display: block;"></canvas>
+                </div>
+              </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js"></script>
+<script src="myChart.js"></script>
