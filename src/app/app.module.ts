@@ -1,15 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {CommonModule, HashLocationStrategy, LocationStrategy} from '@angular/common';
+import {ReactiveFormsModule} from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { LoginwidthComponent } from './auth/loginwidth/loginwidth.component';
-import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
-import { RouterModule } from '@angular/router';
+import {AppComponent} from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {LoginComponent} from './auth/login/login.component';
+import {RegisterComponent} from './auth/register/register.component';
+import {LoginwidthComponent} from './auth/loginwidth/loginwidth.component';
+import {ForgotpasswordComponent} from './auth/forgotpassword/forgotpassword.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,9 @@ import { RouterModule } from '@angular/router';
     CommonModule
   ],
   providers: [
-    {provide:LocationStrategy, useClass:HashLocationStrategy},
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

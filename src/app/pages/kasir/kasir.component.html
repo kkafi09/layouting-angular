@@ -1,48 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/#/dashboard">Tokoku</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a href="/#/dashboard" class="nav-link">Dashboard</a>
-                </li>
-                <li class="nav-item" style="cursor: pointer;">
-                  <a href="/#/product" class="nav-link">Produk</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/#/kasir" class="nav-link active">Kasir</a>
-                </li>
-                <li class="nav-item">  
-                    <a class="nav-link" href="/#/transaksi">Transaksi</a> 
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">Pelanggan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Outlet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Karyawan</a>
-                </li> -->   
-            </ul>
-            <a href="/#/dashboard" class="d-flex align-items-center mx-2">
-                <img src="../../../assets/img/user-solid.svg" style="width: 20px;" class="text-light" alt="" >
-            </a>  
-            <a href="/#/login" class="d-flex align-items-center mx-3">
-                <img src="../../../assets/img/sign-out-alt-solid.svg" style="width: 20px; " class="text-light" alt="" >
-            </a>        
-        
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/#/dashboard">Tokoku</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a href="/#/dashboard" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item" style="cursor: pointer;">
+          <a href="/#/product" class="nav-link">Produk</a>
+        </li>
+        <li class="nav-item">
+          <a href="/#/kasir" class="nav-link active">Kasir</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#/transaksi">Transaksi</a>
+        </li>
+      </ul>
+      <a href="/#/dashboard" class="d-flex align-items-center mx-2">
+        <img src="../../../assets/img/user-solid.svg" style="width: 20px;" class="text-light" alt="">
+      </a>
+      <a href="/#/login" class="d-flex align-items-center mx-3">
+        <img src="../../../assets/img/sign-out-alt-solid.svg" style="width: 20px; " class="text-light" alt="">
+      </a>
+
     </div>
-  </nav>
-  
+  </div>
+</nav>
+
 <div class="container-fluid">
-    <div class="row">
+  <div class="row">
     <div class="col-xl-2 py-4">
-        <ul class="list-group">
+      <ul class="list-group">
         <!-- produk -->
         <li class="list-group-item list-group-item-primary">Produk</li>
         <li class="list-group-item">Kelola Produk</li>
@@ -50,8 +42,8 @@
         <li class="list-group-item">Kategory Produk</li>
         <!-- Toko -->
         <li class="list-group-item list-group-item-primary">Kelola Toko</li>
-        <li class="list-group-item">Pembayaran </li>
-        <li class="list-group-item" >Outlet</li>
+        <li class="list-group-item">Pembayaran</li>
+        <li class="list-group-item">Outlet</li>
         <li class="list-group-item">Inventory</li>
         <!-- Transaksi -->
         <li class="list-group-item list-group-item-primary">Transaksi</li>
@@ -60,9 +52,221 @@
         <!-- Pengaturan -->
         <li class="list-group-item list-group-item-primary">Pengaturan</li>
         <li class="list-group-item">Karyawan</li>
-        </ul>
+      </ul>
     </div>
-    </div>
-</div>    
 
-<p>kasir works!</p>
+    <div class="col-xl-10 pt-4">
+      <div class="row">
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="date" class="col-form-label">Tanggal :</label>
+                </div>
+                <div class="col-auto">
+                  <input type="date" id="date" class="form-control">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="kasir" class="col-form-label">Kasir :</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="kasir" class="form-control">
+                </div>
+              </div>
+              <div class="row g-3 align-item-center">
+                <div class="col-auto">
+                  <label for="customer" class="col-form-label">Customer :</label>
+                </div>
+                <select class="form-select text-center " id="customer" style="width: 200px; height: 40px;">
+                  <option>------</option>
+                  <option>Makanan</option>
+                  <option>Minuman</option>
+                  <option>Snack</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="barcode" class="col-form-label">Barcode :</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="barcode" class="form-control">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="qty" class="col-form-label">Qty :</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="qty" class="form-control">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto ms-auto">
+                  <button type="submit" id="submit" class="form-control">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row g-3 align-items-center">
+                <h6>TOTAL</h6>
+              </div>
+              <div class="row g-3 align-items-center" style="height: 100px;">
+                <h1><strong>15.000</strong></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col my-4">
+          <div class="containter-fluid ">
+            <table class="table table-responsive table-bordered">
+              <thead class="table-primary" style="background-color: #cfe2ff;">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Produk</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- <tr *ngFor="let kasir of tableKasir">
+                <th scope="row">{{kasir.id}}</th>
+                <td>{{kasir.name}}</td>
+                <td>{{kasir.price}}</td>
+                <td>{{kasir.qty}}</td>
+                <td>{{kasir.discount}}</td>
+                <td>{{kasir.total}}</td>
+                <td>
+                    <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>                                   -->
+              <tr>
+                <th scope="row">1</th>
+                <td>Nasi Ayam Geprek</td>
+                <td>8000</td>
+                <td>2</td>
+                <td>0</td>
+                <td>20000</td>
+                <td>
+                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Nasi Goreng</td>
+                <td>8000</td>
+                <td>2</td>
+                <td>0</td>
+                <td>20000</td>
+                <td>
+                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Kopi</td>
+                <td>9000</td>
+                <td>2</td>
+                <td>0</td>
+                <td>20000</td>
+                <td>
+                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Nasi Ayam Geprek</td>
+                <td>8000</td>
+                <td>2</td>
+                <td>0</td>
+                <td>20000</td>
+                <td>
+                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-4">
+        <div class="col-sm-4 rounded-2">
+
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="tanggal" class="col-form-label">Tanggal :</label>
+                </div>
+                <div class="col-auto">
+                  <input type="date" id="tanggal" class="form-control">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="cashier" class="col-form-label">Kasir :</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="cashier" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row g-3 align-items-center">
+                <h6>TOTAL</h6>
+              </div>
+              <div class="row g-3 align-items-center" style="height: 100px;">
+                <h1><strong>15.000</strong></h1>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row g-3 align-items-center">
+                <h6>TOTAL</h6>
+              </div>
+              <div class="row g-3 align-items-center" style="height: 100px;">
+                <h1><strong>15.000</strong></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row g-3 align-items-center">
+                <h6>TOTAL</h6>
+              </div>
+              <div class="row g-3 align-items-center" style="height: 100px;">
+                <h1><strong>15.000</strong></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

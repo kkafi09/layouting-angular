@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -7,17 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
+
+  tableProduct = [
+    {id: 1, name: 'Ayam goreng', category: 'Makanan', price: '20.000'},
+    {id: 2, name: 'Nasi goreng', category: 'Makanan', price: '20.000'},
+    {id: 5, name: 'Kopi', category: 'Minuman', price: '20.000'},
+    {id: 3, name: 'Es Jeruk', category: 'Minuman', price: '20.000'},
+    {id: 4, name: 'Teh', category: 'Minuman', price: '20.000'}
+  ];
+
+  displayStyle = 'none';
 
   ngOnInit(): void {
+    console.log(this.tableProduct);
+
   }
-  
-  displayStyle = "none";
-  
+
   openPopup() {
-    this.displayStyle = "block";
+    this.displayStyle = 'block';
   }
+
   closePopup() {
-    this.displayStyle = "none";
+    this.displayStyle = 'none';
   }
 }
