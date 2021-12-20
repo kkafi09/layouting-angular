@@ -6,7 +6,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
         <li class="nav-item">
           <a href="/#/dashboard" class="nav-link">Dashboard</a>
         </li>
@@ -60,58 +60,27 @@
         <div class="col-sm-4 rounded-2">
           <div class="card shadow-sm">
             <div class="card-body">
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label for="date" class="col-form-label">Tanggal :</label>
-                </div>
-                <div class="col-auto">
-                  <input type="date" id="date" class="form-control">
+              <div class="mb-3 row">
+                <label for="dateInput" class="col-sm-3 col-form-label">Tanggal</label>
+                <div class="col-sm-8">
+                  <input type="date" class="form-control" id="dateInput">
                 </div>
               </div>
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label for="kasir" class="col-form-label">Kasir :</label>
-                </div>
-                <div class="col-auto">
-                  <input type="text" id="kasir" class="form-control">
+              <div class="mb-3 row">
+                <label for="cashier" class="col-sm-3 col-form-label">Kasir</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="cashier">
                 </div>
               </div>
-              <div class="row g-3 align-item-center">
-                <div class="col-auto">
-                  <label for="customer" class="col-form-label">Customer :</label>
-                </div>
-                <select class="form-select text-center " id="customer" style="width: 200px; height: 40px;">
-                  <option>------</option>
-                  <option>Makanan</option>
-                  <option>Minuman</option>
-                  <option>Snack</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 rounded-2">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label for="barcode" class="col-form-label">Barcode :</label>
-                </div>
-                <div class="col-auto">
-                  <input type="text" id="barcode" class="form-control">
-                </div>
-              </div>
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label for="qty" class="col-form-label">Qty :</label>
-                </div>
-                <div class="col-auto">
-                  <input type="text" id="qty" class="form-control">
-                </div>
-              </div>
-              <div class="row g-3 align-items-center">
-                <div class="col-auto ms-auto">
-                  <button type="submit" id="submit" class="form-control">Add</button>
+              <div class="mb-3 row">
+                <label for="customer" class="col-sm-3 col-form-label">Customer</label>
+                <div class="col-sm-8">
+                  <select class="form-select text-center" id="customer" style="width: 240px; height: 40px;">
+                    <option>------</option>
+                    <option>Makanan</option>
+                    <option>Minuman</option>
+                    <option>Snack</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -120,11 +89,34 @@
         <div class="col-sm-4 rounded-2">
           <div class="card shadow-sm">
             <div class="card-body">
-              <div class="row g-3 align-items-center">
-                <h6>TOTAL</h6>
+              <div class="mb-3 row">
+                <label for="barcode" class="col-sm-3 col-form-label">Barcode</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="barcode">
+                </div>
               </div>
-              <div class="row g-3 align-items-center" style="height: 100px;">
-                <h1><strong>15.000</strong></h1>
+              <div class="mb-3 row">
+                <label for="qty" class="col-sm-3 col-form-label">Qty</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="qty">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <div class="col-sm-8 ms-auto">
+                  <button type="submit" class="btn btn-primary" id="submit">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="mb-3 row">
+                <span class="fs-3">Total</span>
+                <div class="col-sm-8 mt-4">
+                  <h1 style="font-size: 60px">100000</h1>
+                </div>
               </div>
             </div>
           </div>
@@ -210,32 +202,40 @@
 
           <div class="card shadow-sm">
             <div class="card-body">
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label for="tanggal" class="col-form-label">Tanggal :</label>
-                </div>
-                <div class="col-auto">
-                  <input type="date" id="tanggal" class="form-control">
+              <div class="mb-3 row">
+                <label for="subtotal" class="col-sm-3 col-form-label">Sub Total</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="subtotal">
                 </div>
               </div>
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label for="cashier" class="col-form-label">Kasir :</label>
+              <div class="mb-3 row">
+                <label for="diskon" class="col-sm-3 col-form-label">Diskon</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="diskon">
                 </div>
-                <div class="col-auto">
-                  <input type="text" id="cashier" class="form-control">
+              </div>
+              <div class="mb-2 row">
+                <label for="grandtotal" class="col-sm-3 col-form-label">Grand Total</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="grandtotal">
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="card shadow-sm">
+          <div class="card shadow-sm mt-2">
             <div class="card-body">
-              <div class="row g-3 align-items-center">
-                <h6>TOTAL</h6>
+              <div class="mb-3 row">
+                <label for="tunai" class="col-sm-3 col-form-label">Tunai</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="tunai">
+                </div>
               </div>
-              <div class="row g-3 align-items-center" style="height: 100px;">
-                <h1><strong>15.000</strong></h1>
+              <div class="mb-2 row ">
+                <label for="kembalian" class="col-sm-3 col-form-label">Kembalian</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="kembalian">
+                </div>
               </div>
             </div>
           </div>
@@ -244,11 +244,9 @@
         <div class="col-sm-4 rounded-2">
           <div class="card shadow-sm">
             <div class="card-body">
-              <div class="row g-3 align-items-center">
-                <h6>TOTAL</h6>
-              </div>
-              <div class="row g-3 align-items-center" style="height: 100px;">
-                <h1><strong>15.000</strong></h1>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 320px"></textarea>
+                <label for="floatingTextarea2">Notes</label>
               </div>
             </div>
           </div>
@@ -256,11 +254,13 @@
         <div class="col-sm-4 rounded-2">
           <div class="card shadow-sm">
             <div class="card-body">
-              <div class="row g-3 align-items-center">
-                <h6>TOTAL</h6>
-              </div>
-              <div class="row g-3 align-items-center" style="height: 100px;">
-                <h1><strong>15.000</strong></h1>
+              <div class="mb-3 row">
+                <div class="col-sm-8 my-2">
+                  <button class="btn btn-warning">Batal</button>
+                </div>
+                <div class="col-sm-8">
+                  <button class="btn btn-success">Proses Pembayaran</button>
+                </div>
               </div>
             </div>
           </div>

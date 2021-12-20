@@ -1,48 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/#/dashboard">Tokoku</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a href="/#/dashboard" class="nav-link">Dashboard</a>
-                </li>
-                <li class="nav-item" style="cursor: pointer;">
-                  <a href="/#/product" class="nav-link active">Produk</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/#/kasir" class="nav-link">Kasir</a>
-                </li>
-                <li class="nav-item">  
-                    <a  href="/#/transaksi" class="nav-link active">Transaksi</a> 
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">Pelanggan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Outlet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Karyawan</a>
-                </li> -->   
-            </ul>
-            <a href="/#/dashboard" class="d-flex align-items-center mx-2">
-                <img src="../../../assets/img/user-solid.svg" style="width: 20px;" class="text-light" alt="" >
-            </a>  
-            <a href="/#/login" class="d-flex align-items-center mx-3">
-                <img src="../../../assets/img/sign-out-alt-solid.svg" style="width: 20px; " class="text-light" alt="" >
-            </a>        
-        
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/#/dashboard">Tokoku</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a href="/#/dashboard" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item" style="cursor: pointer;">
+          <a href="/#/product" class="nav-link">Produk</a>
+        </li>
+        <li class="nav-item">
+          <a href="/#/kasir" class="nav-link">Kasir</a>
+        </li>
+        <li class="nav-item">
+          <a href="/#/transaksi" class="nav-link active">Transaksi</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Pelanggan</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Outlet</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Karyawan</a>
+        </li> -->
+      </ul>
+      <a href="/#/dashboard" class="d-flex align-items-center mx-2">
+        <img src="../../../assets/img/user-solid.svg" style="width: 20px;" class="text-light" alt="">
+      </a>
+      <a href="/#/login" class="d-flex align-items-center mx-3">
+        <img src="../../../assets/img/sign-out-alt-solid.svg" style="width: 20px; " class="text-light" alt="">
+      </a>
+
     </div>
-  </nav>
-  
+  </div>
+</nav>
+
 <div class="container-fluid">
-    <div class="row">
+  <div class="row">
     <div class="col-xl-2 py-4">
-        <ul class="list-group">
+      <ul class="list-group">
         <!-- produk -->
         <li class="list-group-item list-group-item-primary">Produk</li>
         <li class="list-group-item">Kelola Produk</li>
@@ -50,8 +51,8 @@
         <li class="list-group-item">Kategory Produk</li>
         <!-- Toko -->
         <li class="list-group-item list-group-item-primary">Kelola Toko</li>
-        <li class="list-group-item">Pembayaran </li>
-        <li class="list-group-item" >Outlet</li>
+        <li class="list-group-item">Pembayaran</li>
+        <li class="list-group-item">Outlet</li>
         <li class="list-group-item">Inventory</li>
         <!-- Transaksi -->
         <li class="list-group-item list-group-item-primary">Transaksi</li>
@@ -60,9 +61,70 @@
         <!-- Pengaturan -->
         <li class="list-group-item list-group-item-primary">Pengaturan</li>
         <li class="list-group-item">Karyawan</li>
-        </ul>
+      </ul>
     </div>
+    <div class="col-xl-10 pt-4">
+      <div class="row">
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body" style="background-color: #cfe2ff;">
+              <div class="mb-3 row">
+                <span class="fs-3 text-center" >Total Nominal Transaksi</span>
+                <h1 style="font-size: 60px" class="text-center">100000</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 rounded-2">
+          <div class="card shadow-sm">
+            <div class="card-body bg-success">
+              <div class="mb-3 row">
+                <span class="fs-3 text-center ">Total Transaksi</span>
+                <h1 style="font-size: 60px" class="text-center">10</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col my-4">
+          <div class="containter-fluid ">
+            <table class="table table-responsive table-bordered">
+              <thead class="table-primary" style="background-color: #cfe2ff;">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">ID Transaksi</th>
+                <th scope="col">Waktu</th>
+                <th scope="col">Kasir</th>
+                <th scope="col">Total Transaksi</th>
+                <th scope="col">Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- <tr *ngFor="let kasir of tableKasir">
+                <th scope="row">{{kasir.id}}</th>
+                <td>{{kasir.name}}</td>
+                <td>{{kasir.price}}</td>
+                <td>{{kasir.qty}}</td>
+                <td>{{kasir.discount}}</td>
+                <td>{{kasir.total}}</td>
+                <td>
+                    <a href="" class="btn btn-warning me-2">Edit</a>  <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>                                   -->
+              <tr>
+                <th scope="row">1</th>
+                <td>hdf62jhd9s</td>
+                <td>6/12/09</td>
+                <td>2</td>
+                <td>100000</td>
+                <td>
+                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-</div>    
-
-<p>transaksi works!</p>
+  </div>
+</div>

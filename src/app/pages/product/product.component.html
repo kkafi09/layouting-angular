@@ -6,7 +6,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
         <li class="nav-item">
           <a href="/#/dashboard" class="nav-link">Dashboard</a>
         </li>
@@ -66,16 +66,19 @@
           <option>Snack</option>
         </select>
         <!-- add data -->
-        <button type="button" class="btn btn-primary ms-auto" (click)="openPopup()">Tambah</button>
-<!--                <div class="modal"tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">-->
-<!--                    <div class="modal-dialog" role="document">-->
-<!--                      <div class="modal-content">-->
-<!--                        <div class="modal-header">-->
-<!--                          <h4 class="modal-title">Tambah</h4>-->
-<!--                        </div>-->
-<!--                     </div>-->
-<!--                  </div>-->
+<!--        <button type="button" class="btn btn-primary ms-auto" (click)="modalTambah">Tambah</button>-->
+<!--        <ng-template #modalTambah role="document" let-modal>-->
+<!--          <div class="modal"tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">-->
+<!--            <div class="modal-dialog" role="document">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h4 class="modal-title">Tambah</h4>-->
 <!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </ng-template>-->
+
       </div>
 
       <table class="table table-responsive table-bordered">
@@ -89,15 +92,15 @@
         </tr>
         </thead>
         <tbody>
-        <!--        <tr *ngFor="let product of tableProduct">-->
-        <!--          <th scope="row">{{product.id}}</th>-->
-        <!--          <td>{{product.name}}</td>-->
-        <!--          <td>{{product.category}}</td>-->
-        <!--          <td>{{product.price}}</td>-->
-        <!--          <td>-->
-        <!--            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>-->
-        <!--          </td>-->
-        <!--        </tr>-->
+        <tr *ngFor="let product of tableProduct;">
+          <th scope="row">{{product.id}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.category}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+          </td>
+        </tr>
         <tr>
           <th scope="row">1</th>
           <td>Nasi Ayam Geprek</td>
