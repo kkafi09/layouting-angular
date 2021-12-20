@@ -9,6 +9,7 @@ import {ChartsModule} from 'ng2-charts';
 import {RouterModule} from '@angular/router';
 import {KasirComponent} from './kasir/kasir.component';
 import {TransaksiComponent} from './transaksi/transaksi.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {TransaksiComponent} from './transaksi/transaksi.component';
     BrowserModule,
     ChartsModule,
     PagesRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule {

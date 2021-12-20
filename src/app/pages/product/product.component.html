@@ -10,7 +10,7 @@
         <li class="nav-item">
           <a href="/#/dashboard" class="nav-link">Dashboard</a>
         </li>
-        <li class="nav-item" style="cursor: pointer;">
+        <li class="nav-item">
           <a href="/#/product" class="nav-link active">Produk</a>
         </li>
         <li class="nav-item">
@@ -66,19 +66,7 @@
           <option>Snack</option>
         </select>
         <!-- add data -->
-<!--        <button type="button" class="btn btn-primary ms-auto" (click)="modalTambah">Tambah</button>-->
-<!--        <ng-template #modalTambah role="document" let-modal>-->
-<!--          <div class="modal"tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">-->
-<!--            <div class="modal-dialog" role="document">-->
-<!--              <div class="modal-content">-->
-<!--                <div class="modal-header">-->
-<!--                  <h4 class="modal-title">Tambah</h4>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </ng-template>-->
-
+        <button class="btn btn-primary ms-auto" (click)="open(addData)">Tambah</button>
       </div>
 
       <table class="table table-responsive table-bordered">
@@ -92,22 +80,22 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let product of tableProduct;">
-          <th scope="row">{{product.id}}</th>
-          <td>{{product.name}}</td>
-          <td>{{product.category}}</td>
-          <td>{{product.price}}</td>
-          <td>
-            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
-          </td>
-        </tr>
+        <!--        <tr *ngFor="let val of dataProduct">-->
+        <!--          <th scope="row">{{val.id}}</th>-->
+        <!--          <td>{{val.name}}</td>-->
+        <!--          <td>{{val.category}}</td>-->
+        <!--          <td>{{val.price}}</td>-->
+        <!--          <td>-->
+        <!--            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>-->
+        <!--          </td>-->
+        <!--        </tr>-->
         <tr>
           <th scope="row">1</th>
           <td>Nasi Ayam Geprek</td>
           <td>Makanan</td>
           <td>20.000</td>
           <td>
-            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+            <a class="btn btn-warning me-2" (click)="open(editData)">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
           </td>
         </tr>
         <tr>
@@ -116,7 +104,7 @@
           <td>Makanan</td>
           <td>20.000</td>
           <td>
-            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+            <a class="btn btn-warning me-2" (click)="open(editData)">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
           </td>
         </tr>
         <tr>
@@ -125,7 +113,7 @@
           <td>Minuman</td>
           <td>20.000</td>
           <td>
-            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+            <a class="btn btn-warning me-2" (click)="open(editData)">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
           </td>
         </tr>
         <tr>
@@ -134,7 +122,7 @@
           <td>Makanan</td>
           <td>20.000</td>
           <td>
-            <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+            <a class="btn btn-warning me-2" (click)="open(editData)">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
           </td>
         </tr>
         </tbody>
@@ -142,4 +130,90 @@
     </div>
   </div>
 </div>
+
+
+<ng-template #addData let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Tambah Data</h4>
+    <button type="button" class="close btn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama Makanan</label>
+          <input type="text" class="form-control" id="name" placeholder="Masukkan nama makanan"
+                 formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label for="category" class="form-label">Kategori Makanan</label>
+          <select class="form-select" id="category">
+            <option>------</option>
+            <option>Makanan</option>
+            <option>Minuman</option>
+            <option>Snack</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Harga Makanan</label>
+          <input type="number" class="form-control" id="price" placeholder="Masukkan Harga Makanan"
+                 formControlName="price">
+        </div>
+        <div class="mb-3">
+          <label for="hpp" class="form-label">HPP Makanan</label>
+          <input type="number" class="form-control" id="hpp" placeholder="Masukkan HPP Makanan"
+                 formControlName="hpp">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Tambah</button>
+  </div>
+</ng-template>
+
+
+<ng-template #editData let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-edit-title">Edit Data</h4>
+    <button type="button" class="close btn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="mb-3">
+          <label for="editName" class="form-label">Nama Makanan</label>
+          <input type="text" class="form-control" id="editName" placeholder="Masukkan nama makanan"
+                 formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label for="editCategory" class="form-label">Kategori Makanan</label>
+          <select class="form-select" id="editCategory">
+            <option>------</option>
+            <option>Makanan</option>
+            <option>Minuman</option>
+            <option>Snack</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="editPrice" class="form-label">Harga Makanan</label>
+          <input type="number" class="form-control" id="editPrice" placeholder="Masukkan Harga Makanan"
+                 formControlName="price">
+        </div>
+        <div class="mb-3">
+          <label for="editHPP" class="form-label">HPP Makanan</label>
+          <input type="number" class="form-control" id="editHPP" placeholder="Masukkan HPP Makanan"
+                 formControlName="hpp">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Tambah</button>
+  </div>
+</ng-template>
 

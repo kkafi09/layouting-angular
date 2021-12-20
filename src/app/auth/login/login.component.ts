@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {NgbAlertConfig} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -36,7 +37,6 @@ export class LoginComponent implements OnInit {
     }
 
     // display form values on success
-    alert('Sukses Login');
     window.location.href = '/#/dashboard';
   }
 }

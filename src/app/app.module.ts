@@ -10,6 +10,11 @@ import {LoginComponent} from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {LoginwidthComponent} from './auth/loginwidth/loginwidth.component';
 import {ForgotpasswordComponent} from './auth/forgotpassword/forgotpassword.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {DashboardComponent} from './pages/dashboard/dashboard.component';
+import {KasirComponent} from './pages/kasir/kasir.component';
+import {ProductComponent} from './pages/product/product.component';
+import {TransaksiComponent} from './pages/transaksi/transaksi.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,18 @@ import {ForgotpasswordComponent} from './auth/forgotpassword/forgotpassword.comp
     RegisterComponent,
     LoginwidthComponent,
     ForgotpasswordComponent,
+    // DashboardComponent,
+    // KasirComponent,
+    // ProductComponent,
+    // TransaksiComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule,
-    CommonModule
+    CommonModule,
+    NgbModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
