@@ -36,7 +36,7 @@ export class LoginwidthComponent implements OnInit {
     }
 
     // display form values on success
-    alert('sukses login');
+    window.location.href = '/#/dashboard';
   }
 
 }

@@ -7,17 +7,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-        <li class="nav-item">
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/home-solid.svg" alt="" style="width: 20px">
           <a href="/#/dashboard" class="nav-link active">Dashboard</a>
         </li>
-        <li class="nav-item">
-          <a href="/#/product" class="nav-link">Produk</a>
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/box-solid.svg" alt="" style="width: 15px">
+          <a href="/#/product" class="nav-link active">Produk</a>
         </li>
-        <li class="nav-item">
-          <a href="/#/kasir" class="nav-link">Kasir</a>
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/wallet-solid.svg" alt="" style="width: 15px">
+          <a href="/#/kasir" class="nav-link active">Kasir</a>
         </li>
-        <li class="nav-item">
-          <a href="/#/transaksi" class="nav-link">Transaksi</a>
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/file-alt-solid.svg" alt="" style="width: 12px">
+          <a href="/#/transaksi" class="nav-link active">Transaksi</a>
         </li>
       </ul>
       <a href="/#/dashboard" class="d-flex align-items-center mx-2">
@@ -112,39 +116,53 @@
             </div>
           </div>
         </div>
+        <div class="pt-4">
+          <form class="row g-3">
+            <div class="col-auto">
+              <label for="date1" class="visually-hidden">Tanggal awal</label>
+              <input type="date" class="form-control" id="date1">
+            </div>
+            <div class="col-auto"><span>-</span></div>
+            <div class="col-auto">
+              <label for="date2" class="visually-hidden">Tanggal Akhir</label>
+              <input type="date" class="form-control" id="date2">
+            </div>
+          </form>
+        </div>
       </div>
 
 
       <div class="col mt-3">
-        <div class="row">
-          <div class="mb-4">
-            <div class="card shadow-sm">
-              <div class="card-title text-center mt-3">Total Penjualan Per Hari
-                <div class="card-body">
-                  <!-- Bar Chart -->
-                  <canvas id="barsChart" width="300" height="150" style="display: block;"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="d-flex">
-          <div class="col-sm-6 card shadow-sm">
-            <div class="card-title text-center mt-3">Penjualan Produk
+          <div class="col-sm-4 card shadow-sm ">
+            <div class="card-title text-center mt-3">
+              <h5 class="">Total Penjualan produk Hari ini</h5>
               <div class="card-body">
                 <div class="chartjs-chart">
                   <!-- Bar Chart -->
-                  <canvas id="pieChart" width="300" height="300" style="display: block;"></canvas>
+                  <canvas id="barsChart" width="75" height="75" style="display: block;"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 card shadow-sm ">
+            <div class="card-title text-center mt-3">
+              <h5 class="">Penjualan Produk</h5>
+              <div class="card-body">
+                <div class="chartjs-chart">
+                  <!-- Bar Chart -->
+                  <canvas id="pieChart" width="75" height="75" style="display: block;"></canvas>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-6 card shadow-sm  ms-auto">
-            <div class="card-title text-center mt-3">Total Penjualan Bulan ini</div>
+          <div class="col-sm-4 card shadow-sm">
+            <div class="card-title text-center mt-3">
+              <h5 class="">Total Penjualan produk Bulan ini</h5>
+            </div>
             <div class="card-body">
-              <canvas id="lineChart" width="300" height="300" style="display: block;"></canvas>
+              <canvas id="lineChart" width="75" height="75" style="display: block;"></canvas>
             </div>
           </div>
         </div>
@@ -152,5 +170,5 @@
     </div>
   </div>
 </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js"></script>
-  <script src="myChart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js"></script>
+<script src="myChart.js"></script>

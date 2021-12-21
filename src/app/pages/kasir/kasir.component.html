@@ -7,17 +7,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-        <li class="nav-item">
-          <a href="/#/dashboard" class="nav-link">Dashboard</a>
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/home-solid.svg" alt="" style="width: 20px">
+          <a href="/#/dashboard" class="nav-link active">Dashboard</a>
         </li>
-        <li class="nav-item" style="cursor: pointer;">
-          <a href="/#/product" class="nav-link">Produk</a>
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/box-solid.svg" alt="" style="width: 15px">
+          <a href="/#/product" class="nav-link active">Produk</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/wallet-solid.svg" alt="" style="width: 15px">
           <a href="/#/kasir" class="nav-link active">Kasir</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/#/transaksi">Transaksi</a>
+        <li class="nav-item d-flex align-items-center mx-3">
+          <img src="../../../assets/img/file-alt-solid.svg" alt="" style="width: 12px">
+          <a href="/#/transaksi" class="nav-link active">Transaksi</a>
         </li>
       </ul>
       <a href="/#/dashboard" class="d-flex align-items-center mx-2">
@@ -155,7 +159,12 @@
                 <td>0</td>
                 <td>20000</td>
                 <td>
-                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                  <a class="btn btn-warning me-2" (click)="open(editData)">
+                    <img src="../../../assets/img/edit-solid.svg" alt="" width="18">
+                  </a>
+                  <a href="" class="btn btn-danger align-items-center">
+                    <img src="../../../assets/img/trash-solid.svg" alt="" width="16">
+                  </a>
                 </td>
               </tr>
               <tr>
@@ -166,7 +175,12 @@
                 <td>0</td>
                 <td>20000</td>
                 <td>
-                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                  <a class="btn btn-warning me-2" (click)="open(editData)">
+                    <img src="../../../assets/img/edit-solid.svg" alt="" width="18">
+                  </a>
+                  <a href="" class="btn btn-danger align-items-center">
+                    <img src="../../../assets/img/trash-solid.svg" alt="" width="16">
+                  </a>
                 </td>
               </tr>
               <tr>
@@ -177,7 +191,12 @@
                 <td>0</td>
                 <td>20000</td>
                 <td>
-                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                  <a class="btn btn-warning me-2" (click)="open(editData)">
+                    <img src="../../../assets/img/edit-solid.svg" alt="" width="18">
+                  </a>
+                  <a href="" class="btn btn-danger align-items-center">
+                    <img src="../../../assets/img/trash-solid.svg" alt="" width="16">
+                  </a>
                 </td>
               </tr>
               <tr>
@@ -188,7 +207,12 @@
                 <td>0</td>
                 <td>20000</td>
                 <td>
-                  <a href="" class="btn btn-warning me-2">Edit</a> <a href="" class="btn btn-danger">Hapus</a>
+                  <a class="btn btn-warning me-2" (click)="open(editData)">
+                    <img src="../../../assets/img/edit-solid.svg" alt="" width="18">
+                  </a>
+                  <a href="" class="btn btn-danger align-items-center">
+                    <img src="../../../assets/img/trash-solid.svg" alt="" width="16">
+                  </a>
                 </td>
               </tr>
 
@@ -245,7 +269,8 @@
           <div class="card shadow-sm">
             <div class="card-body">
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 320px"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                          style="height: 320px"></textarea>
                 <label for="floatingTextarea2">Notes</label>
               </div>
             </div>
@@ -270,3 +295,45 @@
   </div>
 </div>
 
+<!--edit data-->
+<ng-template #editData let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-edit-title">Edit Data</h4>
+    <button type="button" class="close btn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="mb-3">
+          <label for="editName" class="form-label">Nama Makanan</label>
+          <input type="text" class="form-control" id="editName" placeholder="Masukkan nama makanan"
+                 formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label for="editCategory" class="form-label">Kategori Makanan</label>
+          <select class="form-select" id="editCategory">
+            <option>------</option>
+            <option>Makanan</option>
+            <option>Minuman</option>
+            <option>Snack</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="editPrice" class="form-label">Harga Makanan</label>
+          <input type="number" class="form-control" id="editPrice" placeholder="Masukkan Harga Makanan"
+                 formControlName="price">
+        </div>
+        <div class="mb-3">
+          <label for="editHPP" class="form-label">HPP Makanan</label>
+          <input type="number" class="form-control" id="editHPP" placeholder="Masukkan HPP Makanan"
+                 formControlName="hpp">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Tambah</button>
+  </div>
+</ng-template>
