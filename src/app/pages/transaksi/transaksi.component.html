@@ -54,8 +54,8 @@
         <li class="list-group-item">Penjualan</li>
         <li class="list-group-item">Pembelian</li>
         <!-- Pengaturan -->
-        <li class="list-group-item list-group-item-primary">Pengaturan</li>
-        <li class="list-group-item">Karyawan</li>
+        <li class="list-group-item list-group-item-primary">Laporan</li>
+        <li class="list-group-item"><a href="/#/laporan" class="text-decoration-none text-muted">Penjualan</a></li>
       </ul>
     </div>
     <div class="col-xl-10 pt-4">
@@ -71,7 +71,7 @@
             <input type="date" class="form-control" id="date2">
           </div>
           <div class="col-auto">
-            <a class="btn btn-primary" (click)="open(detailData)">Proses</a>
+            <a class="btn btn-primary">Proses</a>
           </div>
         </form>
       </div>
@@ -125,14 +125,17 @@
                 <th scope="row">1</th>
                 <td>hdf62jhd9s</td>
                 <td>6/12/09</td>
-                <td>2</td>
+                <td>Budi Nugroho</td>
                 <td>100000</td>
                 <td>
                   <a class="btn btn-warning me-2" (click)="open(editData)">
                     <img src="../../../assets/img/edit-solid.svg" alt="" width="18">
                   </a>
-                  <a href="" class="btn btn-danger align-items-center">
+                  <a href="" class="btn btn-danger align-items-center me-2">
                     <img src="../../../assets/img/trash-solid.svg" alt="" width="16">
+                  </a>
+                  <a class="btn btn-info align-items-center" (click)="open(detailData)">
+                    <img src="../../../assets/img/file-download-solid.svg" alt="" width="14">
                   </a>
                 </td>
               </tr>
@@ -158,27 +161,22 @@
     <form>
       <div class="form-group">
         <div class="mb-3">
-          <label for="editName" class="form-label">Nama Makanan</label>
-          <input type="text" class="form-control" id="editName" placeholder="Masukkan nama makanan"
+          <label for="editName" class="form-label">ID Transaksi</label>
+          <input type="text" class="form-control" id="editName" disabled placeholder="Id Transaksi" value="2f6fdh43g4"
                  formControlName="name">
         </div>
         <div class="mb-3">
-          <label for="editCategory" class="form-label">Kategori Makanan</label>
-          <select class="form-select" id="editCategory">
-            <option>------</option>
-            <option>Makanan</option>
-            <option>Minuman</option>
-            <option>Snack</option>
-          </select>
+          <label for="date3" class="form-label">Waktu</label>
+          <input type="date" class="form-control" id="date3">
         </div>
         <div class="mb-3">
-          <label for="editPrice" class="form-label">Harga Makanan</label>
-          <input type="number" class="form-control" id="editPrice" placeholder="Masukkan Harga Makanan"
+          <label for="cashier" class="form-label">Kasir</label>
+          <input type="text" class="form-control" id="cashier"
                  formControlName="price">
         </div>
         <div class="mb-3">
-          <label for="editHPP" class="form-label">HPP Makanan</label>
-          <input type="number" class="form-control" id="editHPP" placeholder="Masukkan HPP Makanan"
+          <label for="total" class="form-label">Total</label>
+          <input type="number" class="form-control" id="total" placeholder="Total Transaksi"
                  formControlName="hpp">
         </div>
       </div>

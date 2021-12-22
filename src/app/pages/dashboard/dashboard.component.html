@@ -30,7 +30,6 @@
       <a href="/#/login" class="d-flex align-items-center mx-3">
         <img src="../../../assets/img/sign-out-alt-solid.svg" style="width: 20px; " class="text-light" alt="">
       </a>
-
     </div>
   </div>
 </nav>
@@ -54,8 +53,8 @@
         <li class="list-group-item">Penjualan</li>
         <li class="list-group-item">Pembelian</li>
         <!-- Pengaturan -->
-        <li class="list-group-item list-group-item-primary">Pengaturan</li>
-        <li class="list-group-item">Karyawan</li>
+        <li class="list-group-item list-group-item-primary">Laporan</li>
+        <li class="list-group-item"><a href="/#/laporan" class="text-decoration-none text-muted">Penjualan</a></li>
       </ul>
     </div>
     <div class="col-xl-10 pt-4">
@@ -118,13 +117,12 @@
         </div>
         <div class="pt-4">
           <form class="row g-3">
-            <div class="col-auto">
-              <label for="date1" class="visually-hidden">Tanggal awal</label>
+            <div class="col-auto d-flex justify-content-center align-items-center">
+              <label for="date1" class="me-3">Awal</label>
               <input type="date" class="form-control" id="date1">
             </div>
-            <div class="col-auto"><span>-</span></div>
-            <div class="col-auto">
-              <label for="date2" class="visually-hidden">Tanggal Akhir</label>
+            <div class="col-auto d-flex justify-content-center align-items-center">
+              <label for="date2" class="me-3">Akhir</label>
               <input type="date" class="form-control" id="date2">
             </div>
           </form>

@@ -10,18 +10,23 @@ import {RouterModule} from '@angular/router';
 import {KasirComponent} from './kasir/kasir.component';
 import {TransaksiComponent} from './transaksi/transaksi.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { LaporanComponent } from './laporan/laporan.component';
+import {AppModule} from '../app.module';
+import {LayoutsModule} from '../layouts/layouts.module';
+import { CetakLaporanComponent } from './cetak-laporan/cetak-laporan.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, ProductComponent, KasirComponent, TransaksiComponent],
+  declarations: [DashboardComponent, ProductComponent, KasirComponent, TransaksiComponent, LaporanComponent, CetakLaporanComponent],
   imports: [
     CommonModule,
     BrowserModule,
     ChartsModule,
     PagesRoutingModule,
     RouterModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    AppModule,
+  ],
 })
 export class PagesModule {
 }

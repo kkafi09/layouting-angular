@@ -26,12 +26,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     RouterModule,
     CommonModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

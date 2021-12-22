@@ -9,6 +9,8 @@ import {DashboardComponent} from './pages/dashboard/dashboard.component';
 import {ProductComponent} from './pages/product/product.component';
 import {KasirComponent} from './pages/kasir/kasir.component';
 import {TransaksiComponent} from './pages/transaksi/transaksi.component';
+import {LaporanComponent} from './pages/laporan/laporan.component';
+import {CetakLaporanComponent} from './pages/cetak-laporan/cetak-laporan.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'product', component: ProductComponent},
   {path: 'kasir', component: KasirComponent},
-  {path: 'transaksi', component: TransaksiComponent}
+  {path: 'transaksi', component: TransaksiComponent},
+  {path: 'laporan', component: LaporanComponent},
+  {path: 'cetak-laporan', component: CetakLaporanComponent}
 ];
 
 @NgModule({
