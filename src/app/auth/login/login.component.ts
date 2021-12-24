@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {NgbAlertConfig} from '@ng-bootstrap/ng-bootstrap';
-
 
 @Component({
   selector: 'app-login',
