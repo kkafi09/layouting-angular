@@ -103,13 +103,13 @@
         <div class="col-xl-12 my-4 d-flex justify-content-center">
           <div class="">
             <a class="btn btn-info mx-4" href="/#/cetak-laporan">Tampilkan</a>
-            <a class="btn btn-danger mx-4">PDF</a>
+            <a class="btn btn-danger mx-4" (click)="download()">PDF</a>
             <a class="btn btn-success mx-4">Excel</a>
           </div>
         </div>
         <div class="col my-4">
-          <div class="containter-fluid ">
-            <table class="table table-responsive table-bordered">
+          <div pdf-content="element-to-download" class="containter-fluid ">
+            <table id="table" class="table table-responsive table-bordered">
               <thead class="table-primary" style="background-color: #cfe2ff;">
               <tr>
                 <th scope="col">No</th>
