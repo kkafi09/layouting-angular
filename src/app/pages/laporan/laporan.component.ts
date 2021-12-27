@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-laporan',
@@ -9,13 +10,16 @@ import html2canvas from 'html2canvas';
 })
 export class LaporanComponent implements OnInit {
 
+  title = 'export-to-excel';
+  filename = 'excel.xlsx';
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
-  download() {
+  downloadPDF() {
     const element = document.getElementById('table');
     html2canvas(element).then((canvas) => {
       console.log(canvas);
@@ -36,6 +40,16 @@ export class LaporanComponent implements OnInit {
 
       doc.save('laporan.pdf');
     });
+  }
+
+  downloadExcel() {
+    const element = document.getElementById('table');
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+
+    XLSX.writeFile(wb, this.filename);
   }
 
 }

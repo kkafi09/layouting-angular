@@ -18,7 +18,7 @@ import {LoginwidthComponent} from './auth/loginwidth/loginwidth.component';
     LoginComponent,
     ForgotpasswordComponent,
     RegisterComponent,
-    LoginwidthComponent,
+    LoginwidthComponent
   ],
   imports: [
     BrowserModule,

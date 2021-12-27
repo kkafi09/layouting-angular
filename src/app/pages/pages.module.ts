@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
 
 import {PagesRoutingModule} from './pages-routing.module';
 import {ChartsModule} from 'ng2-charts';
@@ -18,7 +17,6 @@ import {TransaksiComponent} from './transaksi/transaksi.component';
   declarations: [DashboardComponent, ProductComponent, KasirComponent, CetakLaporanComponent, LaporanComponent, TransaksiComponent],
   imports: [
     CommonModule,
-    BrowserModule,
     ChartsModule,
     PagesRoutingModule,
     RouterModule,
