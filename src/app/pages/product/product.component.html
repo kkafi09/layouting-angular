@@ -47,8 +47,8 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let item of products">
-          <td>{{item.id}}</td>
+        <tr *ngFor="let item of products; index as i">
+          <td>{{ i+1}}</td>
           <td>{{item.name}}</td>
           <td>{{item.category}}</td>
           <td>{{item.price}}</td>
@@ -76,16 +76,19 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <div class="mb-3">
           <label for="name" class="form-label">Nama Makanan</label>
           <input type="text" class="form-control" id="name" placeholder="Masukkan nama makanan"
-                 formControlName="name">
+                 formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+          <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">Name is required</div>
+          </div>
         </div>
         <div class="mb-3">
           <label for="category" class="form-label">Kategori Makanan</label>
-          <select class="form-select" id="category">
+          <select class="form-select" id="category" formControlName="category">
             <option>------</option>
             <option>Makanan</option>
             <option>Minuman</option>
@@ -95,18 +98,24 @@
         <div class="mb-3">
           <label for="price" class="form-label">Harga Makanan</label>
           <input type="number" class="form-control" id="price" placeholder="Masukkan Harga Makanan"
-                 formControlName="price">
+                 formControlName="price" [ngClass]="{ 'is-invalid': submitted && f.price.errors }">
+          <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+            <div *ngIf="f.price.errors.required">Price is required</div>
+          </div>
         </div>
         <div class="mb-3">
           <label for="hpp" class="form-label">HPP Makanan</label>
           <input type="number" class="form-control" id="hpp" placeholder="Masukkan HPP Makanan"
-                 formControlName="hpp">
+                 formControlName="hpp" [ngClass]="{ 'is-invalid': submitted && f.hpp.errors }">
+          <div *ngIf="submitted && f.hpp.errors" class="invalid-feedback">
+            <div *ngIf="f.hpp.errors.required">Price is required</div>
+          </div>
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Tambah</button>
+    <button type="button" class="btn btn-outline-dark" (click)="addItem(); onSubmit()">Tambah</button>
   </div>
 </ng-template>
 

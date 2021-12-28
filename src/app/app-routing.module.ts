@@ -3,24 +3,9 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {DashboardLayoutComponent} from './layouts/dashboard-layout/dashboard-layout.component';
 import {AuthLayoutComponent} from './layouts/auth-layout/auth-layout.component';
+import {CetakLaporanComponent} from './pages/cetak-laporan/cetak-laporan.component';
 
 const routes: Routes = [
-  // App routes
-  {
-    path: '',
-    component: DashboardLayoutComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'pages',
-        loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
-      }
-    ]
-  },
   // Auth routes
   {
     path: '',
@@ -28,7 +13,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/auth',
+        redirectTo: 'auth',
         pathMatch: 'full'
       },
       {
@@ -37,6 +22,23 @@ const routes: Routes = [
       }
     ]
   },
+  // App routes
+  {
+    path: '',
+    component: DashboardLayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'pages',
+        pathMatch: 'full'
+      },
+      {
+        path: 'pages',
+        loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
+      }
+    ]
+  },
+  {path: 'cetak-laporan', component: CetakLaporanComponent}
 ];
 
 @NgModule({

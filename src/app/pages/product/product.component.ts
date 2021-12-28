@@ -11,31 +11,47 @@ export class ProductComponent implements OnInit {
   closeResult = '';
   productForm: FormGroup;
   submitted = false;
-  products: any[] = [];
+  products: any;
 
   constructor(private modalService: NgbModal, private formBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {
     this.products = [
-      {id: 1, name: 'Ayam goreng', category: 'Makanan', price: '20.000'},
-      {id: 2, name: 'Nasi goreng', category: 'Makanan', price: '20.000'},
-      {id: 5, name: 'Kopi', category: 'Minuman', price: '20.000'},
-      {id: 3, name: 'Es Jeruk', category: 'Minuman', price: '20.000'},
-      {id: 4, name: 'Teh', category: 'Minuman', price: '20.000'}
+      { name: 'Ayam goreng', category: 'Makanan', price: '20.000'},
+      { name: 'Nasi goreng', category: 'Makanan', price: '20.000'},
+      { name: 'Kopi', category: 'Minuman', price: '20.000'},
+      { name: 'Es Jeruk', category: 'Minuman', price: '20.000'},
+      { name: 'Teh', category: 'Minuman', price: '20.000'}
     ];
-    console.log(this.products);
 
     this.productForm = this.formBuilder.group({
       name: ['', [Validators.required]],
+      category: ['', [Validators.required]],
       price: ['', [Validators.required]],
-      hpp: ['', [Validators.required]]
+      hpp: ['', [Validators.required]],
     }, {});
 
   }
 
+  public addItem(): void {
+    if (this.submitted) {
+      this.products.push(this.productForm.value);
+    }
+    this.productForm.reset();
+  }
+
   get f() {
     return this.productForm.controls;
+  }
+
+  onSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.productForm.invalid) {
+      return;
+    }
   }
 
   open(content) {
