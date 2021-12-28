@@ -7,18 +7,14 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {LoginComponent} from './auth/login/login.component';
-import {ForgotpasswordComponent} from './auth/forgotpassword/forgotpassword.component';
-import {RegisterComponent} from './auth/register/register.component';
-import {LoginwidthComponent} from './auth/loginwidth/loginwidth.component';
+import {AuthLayoutComponent} from './layouts/auth-layout/auth-layout.component';
+import {DashboardLayoutComponent} from './layouts/dashboard-layout/dashboard-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    ForgotpasswordComponent,
-    RegisterComponent,
-    LoginwidthComponent
+    DashboardLayoutComponent,
+    AuthLayoutComponent
   ],
   imports: [
     BrowserModule,

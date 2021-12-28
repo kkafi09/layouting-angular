@@ -35,6 +35,6 @@ export class LoginComponent implements OnInit {
     }
 
     // display form values on success
-    window.location.href = '/#/dashboard';
+    window.location.href = '/#/pages/dashboard';
   }
 }

@@ -7,10 +7,46 @@ import {RegisterComponent} from './register/register.component';
 
 
 const routes: Routes = [
-  {path: 'login-default', component: LoginComponent},
-  {path: 'login-width', component: LoginwidthComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'forgotPass', component: ForgotpasswordComponent},
+  {
+    path: '',
+    component: LoginComponent,
+    children: [
+      {
+        path: 'auth',
+        component: LoginComponent
+      }
+    ]
+  },
+  {
+    path: '',
+    component: LoginwidthComponent,
+    children: [
+      {
+        path: 'login-width',
+        component: LoginwidthComponent
+      }
+    ]
+  },
+  {
+    path: '',
+    component: RegisterComponent,
+    children: [
+      {
+        path: 'register',
+        component: RegisterComponent
+      }
+    ]
+  },
+  {
+    path: '',
+    component: ForgotpasswordComponent,
+    children: [
+      {
+        path: 'forgot',
+        component: ForgotpasswordComponent
+      }
+    ]
+  },
 ];
 
 @NgModule({

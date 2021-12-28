@@ -12,8 +12,8 @@
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <input name="lastName" type="text" class="form-control" formControlName="lastName" id="firstName" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
-                        <label for="firstName" class="px-4">Nama Belakang</label>
+                        <input name="lastName" type="text" class="form-control" formControlName="lastName" id="lastName" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+                        <label for="lastName" class="px-4">Nama Belakang</label>
                         <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                             <div *ngIf="f.email.errors.required">LastName is required</div>
                         </div>
@@ -53,16 +53,16 @@
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <input name="confirmPassword" type="password" class="form-control" formControlName="confirmPassword" id="id" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
+                        <input name="confirmPassword" type="password" class="form-control" formControlName="confirmPassword" id="confirmPassword" placeholder="id" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
                         <label for="confirmPassword" class="px-4">Confirm Password</label><div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
                             <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
                             <div *ngIf="f.confirmPassword.errors.mustMatch">Password must be match</div>
                         </div>
                     </div>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary shadow-sm" type="submit" (ngSubmit)="onSubmit()">Register</button>
+                <button class="w-100 btn btn-lg btn-primary shadow-sm" type="submit" (click)="onSubmit()">Register</button>
             </form>
-            <span class="py-5"><a routerLink="/" class="text-primary text-decoration-none pt-5">Kembali</a></span>
+            <span class="py-5"><a routerLink="/auth/" class="text-primary text-decoration-none pt-5">Kembali</a></span>
         </div>
     </div>
 </div>

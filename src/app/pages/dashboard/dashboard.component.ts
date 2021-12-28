@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import * as Chart from 'chart.js';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,13 +8,18 @@ import * as Chart from 'chart.js';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  dateForm: FormGroup;
 
-
-  constructor() {
+  constructor(private formBuilder: FormBuilder) {
 
   }
 
   ngOnInit(): void {
+    this.dateForm = this.formBuilder.group({
+      first: ['', [Validators.required]],
+      last: ['', [Validators.required]],
+    }, {});
+
     const ctx = document.getElementById('pieChart') as HTMLCanvasElement;
     const ctx1 = document.getElementById('barsChart') as HTMLCanvasElement;
     const ctx2 = document.getElementById('lineChart') as HTMLCanvasElement;
@@ -79,9 +85,9 @@ export class DashboardComponent implements OnInit {
       },
       options: {
         scales: {
-            // y: {
-            //     beginAtZero: true
-            // }
+          // y: {
+          //     beginAtZero: true
+          // }
         }
       }
     });

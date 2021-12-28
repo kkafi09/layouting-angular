@@ -47,6 +47,6 @@ export class RegisterComponent implements OnInit {
 
     // display form values on success
     alert('berhasil register');
-    window.location.href = '/';
+    window.location.href = '/auth/';
   }
 }

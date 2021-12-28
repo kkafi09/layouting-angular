@@ -1,39 +1,3 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/#/dashboard">Tokoku</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-        <li class="nav-item d-flex align-items-center mx-3">
-          <img src="../../../assets/img/home-solid.svg" alt="" style="width: 20px">
-          <a href="/#/dashboard" class="nav-link active">Dashboard</a>
-        </li>
-        <li class="nav-item d-flex align-items-center mx-3">
-          <img src="../../../assets/img/box-solid.svg" alt="" style="width: 15px">
-          <a href="/#/product" class="nav-link active">Produk</a>
-        </li>
-        <li class="nav-item d-flex align-items-center mx-3">
-          <img src="../../../assets/img/wallet-solid.svg" alt="" style="width: 15px">
-          <a href="/#/kasir" class="nav-link active">Kasir</a>
-        </li>
-        <li class="nav-item d-flex align-items-center mx-3">
-          <img src="../../../assets/img/file-alt-solid.svg" alt="" style="width: 12px">
-          <a href="/#/transaksi" class="nav-link active">Transaksi</a>
-        </li>
-      </ul>
-      <a href="/#/dashboard" class="d-flex align-items-center mx-2">
-        <img src="../../../assets/img/user-solid.svg" style="width: 20px;" class="text-light" alt="">
-      </a>
-      <a href="/#/login" class="d-flex align-items-center mx-3">
-        <img src="../../../assets/img/sign-out-alt-solid.svg" style="width: 20px; " class="text-light" alt="">
-      </a>
-    </div>
-  </div>
-</nav>
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-xl-2 py-4">
@@ -54,7 +18,7 @@
         <li class="list-group-item">Pembelian</li>
         <!-- Pengaturan -->
         <li class="list-group-item list-group-item-primary">Laporan</li>
-        <li class="list-group-item"><a href="/#/laporan" class="text-decoration-none text-muted">Penjualan</a></li>
+        <li class="list-group-item"><a href="/#/pages/laporan" class="text-decoration-none text-muted">Penjualan</a></li>
       </ul>
     </div>
     <div class="col-xl-10 pt-4">
@@ -116,14 +80,14 @@
           </div>
         </div>
         <div class="pt-4">
-          <form class="row g-3">
+          <form class="row g-3" [formGroup]="dateForm">
             <div class="col-auto d-flex justify-content-center align-items-center">
               <label for="date1" class="me-3">Awal</label>
-              <input type="date" class="form-control" id="date1">
+              <input type="date" class="form-control" formControlName="first" id="date1">
             </div>
             <div class="col-auto d-flex justify-content-center align-items-center">
               <label for="date2" class="me-3">Akhir</label>
-              <input type="date" class="form-control" id="date2">
+              <input type="date" class="form-control" formControlName="last" id="date2">
             </div>
           </form>
         </div>
@@ -168,5 +132,6 @@
     </div>
   </div>
 </div>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js"></script>
-<script src="myChart.js"></script>
