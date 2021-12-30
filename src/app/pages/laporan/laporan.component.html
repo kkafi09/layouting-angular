@@ -1,105 +1,78 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xl-2 my-4">
-      <ul class="list-group">
-        <!-- produk -->
-        <li class="list-group-item list-group-item-primary">Produk</li>
-        <li class="list-group-item">Kelola Produk</li>
-        <li class="list-group-item">Diskon</li>
-        <li class="list-group-item">Kategory Produk</li>
-        <!-- Toko -->
-        <li class="list-group-item list-group-item-primary">Kelola Toko</li>
-        <li class="list-group-item">Pembayaran</li>
-        <li class="list-group-item">Outlet</li>
-        <li class="list-group-item">Inventory</li>
-        <!-- Transaksi -->
-        <li class="list-group-item list-group-item-primary">Transaksi</li>
-        <li class="list-group-item">Penjualan</li>
-        <li class="list-group-item">Pembelian</li>
-        <!-- Pengaturan -->
-        <li class="list-group-item list-group-item-primary">Laporan</li>
-        <li class="list-group-item"><a href="/#/laporan" class="text-decoration-none text-muted">Penjualan</a></li>
-      </ul>
-    </div>
-    <div class="col-xl-10 my-4">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="my-2 d-flex">
-            <label for="period" class="col-sm-2 col-form-label">Periode</label>
-            <div class="col-sm-5">
-              <input type="date" class="form-control" id="period">
-            </div>
-            <div class="col-sm-5">
-              <input type="date" class="form-control" id="period1">
-            </div>
-          </div>
-          <div class="my-2 d-flex">
-            <label for="kasir" class="col-sm-2 col-form-label">Kasir</label>
-            <div class="col-sm-10">
-              <select class="form-select" id="kasir">
-                <option>Semua Kasir</option>
-                <option>Budi Nugroho</option>
-                <option>Joko</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="my-2 d-flex">
-            <label for="jenispembayaran" class="col-sm-2 col-form-label">Bayar</label>
-            <div class="col-sm-10">
-              <select class="form-select " id="jenispembayaran">
-                <option>Tunai</option>
-                <option>Non-tunai</option>
-              </select>
-            </div>
-          </div>
-          <div class="my-2 d-flex">
-            <label for="customer" class="col-sm-2 col-form-label">Customer</label>
-            <div class="col-sm-10">
-              <select class="form-select" id="customer">
-                <option>Member</option>
-                <option>Non-Member</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-12 my-4 d-flex justify-content-center">
-          <div class="">
-            <a class="btn btn-info mx-4" href="/#/cetak-laporan">Tampilkan</a>
-            <a class="btn btn-danger mx-4" (click)="downloadPDF()">PDF</a>
-            <a class="btn btn-success mx-4" (click)="downloadExcel()">Excel</a>
-          </div>
-        </div>
-        <div class="col my-4">
-          <div pdf-content="element-to-download" class="containter-fluid ">
-            <table id="table" class="table table-responsive table-bordered">
-              <thead class="table-primary" style="background-color: #cfe2ff;">
-              <tr>
-                <th scope="col">No</th>
-                <th scope="col">ID Transaksi</th>
-                <th scope="col">Waktu</th>
-                <th scope="col">Kasir</th>
-                <th scope="col">Total Transaksi</th>
-                <th scope="col">Jenis Pembayaran</th>
-                <th scope="col">Customer</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr *ngFor="let value of tableLaporan; index as i">
-                <th scope="row">{{i+1}}</th>
-                <td>{{value.id}}</td>
-                <td>{{value.time}}</td>
-                <td>{{value.kasir}}</td>
-                <td>{{value.total}}</td>
-                <td>{{value.jenisPembayaran}}</td>
-                <td>{{value.customer}}</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="my-2 d-flex">
+      <label for="period" class="col-sm-2 col-form-label">Periode</label>
+      <div class="col-sm-5">
+        <input type="date" class="form-control" id="period">
       </div>
+      <div class="col-sm-5">
+        <input type="date" class="form-control" id="period1">
+      </div>
+    </div>
+    <div class="my-2 d-flex">
+      <label for="kasir" class="col-sm-2 col-form-label">Kasir</label>
+      <div class="col-sm-10">
+        <select class="form-select" id="kasir">
+          <option>Semua Kasir</option>
+          <option>Budi Nugroho</option>
+          <option>Joko</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="my-2 d-flex">
+      <label for="jenispembayaran" class="col-sm-2 col-form-label">Bayar</label>
+      <div class="col-sm-10">
+        <select class="form-select " id="jenispembayaran">
+          <option>Tunai</option>
+          <option>Non-tunai</option>
+        </select>
+      </div>
+    </div>
+    <div class="my-2 d-flex">
+      <label for="customer" class="col-sm-2 col-form-label">Customer</label>
+      <div class="col-sm-10">
+        <select class="form-select" id="customer">
+          <option>Member</option>
+          <option>Non-Member</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-12 my-4 d-flex justify-content-center">
+    <div class="">
+      <a class="btn btn-info mx-4" href="/#/cetak-laporan">Tampilkan</a>
+      <a class="btn btn-danger mx-4" (click)="downloadPDF()">PDF</a>
+      <a class="btn btn-success mx-4" (click)="downloadExcel()">Excel</a>
+    </div>
+  </div>
+  <div class="col my-4">
+    <div pdf-content="element-to-download" class="containter-fluid ">
+      <table id="table" class="table table-responsive table-bordered">
+        <thead class="table-primary" style="background-color: #cfe2ff;">
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">ID Transaksi</th>
+          <th scope="col">Waktu</th>
+          <th scope="col">Kasir</th>
+          <th scope="col">Total Transaksi</th>
+          <th scope="col">Jenis Pembayaran</th>
+          <th scope="col">Customer</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let value of tableLaporan; index as i">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{value.id}}</td>
+          <td>{{value.time}}</td>
+          <td>{{value.kasir}}</td>
+          <td>{{value.total}}</td>
+          <td>{{value.jenisPembayaran}}</td>
+          <td>{{value.customer}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

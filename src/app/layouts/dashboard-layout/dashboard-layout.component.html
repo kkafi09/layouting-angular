@@ -34,4 +34,31 @@
   </div>
 </nav>
 
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-2 py-4">
+      <ul class="list-group">
+        <!-- produk -->
+        <li class="list-group-item list-group-item-primary">Produk</li>
+        <li class="list-group-item">Kelola Produk</li>
+        <li class="list-group-item">Diskon</li>
+        <li class="list-group-item">Kategory Produk</li>
+        <!-- Toko -->
+        <li class="list-group-item list-group-item-primary">Kelola Toko</li>
+        <li class="list-group-item">Pembayaran</li>
+        <li class="list-group-item">Outlet</li>
+        <li class="list-group-item">Inventory</li>
+        <!-- Transaksi -->
+        <li class="list-group-item list-group-item-primary">Transaksi</li>
+        <li class="list-group-item">Penjualan</li>
+        <li class="list-group-item">Pembelian</li>
+        <!-- Pengaturan -->
+        <li class="list-group-item list-group-item-primary">Laporan</li>
+        <li class="list-group-item"><a href="/#/pages/laporan" class="text-decoration-none text-muted">Penjualan</a></li>
+      </ul>
+    </div>
+    <div class="col-xl-10 pt-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
